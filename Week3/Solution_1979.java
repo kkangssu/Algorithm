@@ -59,7 +59,7 @@ public class Solution_1979 {
 				sumR = 0;
 			}
 			
-			
+			//남은 칸이 글자 수 보다 적을 경우 break할 수 있을거 같음!
 			if(map[j][i] == 1) {
 				sumC++;
 			}
