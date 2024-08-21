@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_2805 {
+public class Main_2805_나무자르기 {
 	
 	static int N;
 	static int M;
