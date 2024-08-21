@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Solution_1288 {
+public class Solution_1288_새로운불면증치료법 {
 	
 	static int T;
 	static Set<Integer> set;
