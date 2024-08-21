@@ -31,6 +31,8 @@ public class Main_2805 {
 		System.out.println(min-1);
 		
 	}
+	
+	//Binary Search
 	static void findH() {
 		while(min < max) {
 			long sum = 0L;
