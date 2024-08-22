@@ -7,8 +7,8 @@ public class Solution_1959_두개의숫자열 {
     static int T;
     static int N;
     static int M;
-    static String[] a;
-    static String[] b;
+    static Integer[] a;
+    static Integer[] b;
     static int sum;
  
     public static void main(String[] args) throws Exception {
@@ -20,23 +20,25 @@ public class Solution_1959_두개의숫자열 {
             StringTokenizer st = new StringTokenizer(br.readLine());
             N = Integer.parseInt(st.nextToken());
             M = Integer.parseInt(st.nextToken());
-            a = new String[N];
-            b = new String[M];
+            a = new Integer[N];
+            b = new Integer[M];
             st = new StringTokenizer(br.readLine(), " ");
             for (int i = 0; i < N; i++) {
-                a[i] = st.nextToken();
+                a[i] = Integer.parseInt(st.nextToken());
             }
             st = new StringTokenizer(br.readLine(), " ");
             for (int i = 0; i < M; i++) {
-                b[i] = st.nextToken();
+                b[i] = Integer.parseInt(st.nextToken());
             }
              
             int max = 0;
+            //배열 a와 배열 b 중 어떤 배열이 더 길지 모르기 때문에 경우 나눔
             if(N < M) {
                 for (int i = 0; i <= M-N; i++) {
                     sum = 0;
+                    int idx = i;
                     for (int j = 0; j < N; j++) {
-                        opp(a[j], b[j+i]);
+                        sum += a[j]*b[idx++];
                     }
                     max = Math.max(max, sum);
                 }
@@ -44,14 +46,15 @@ public class Solution_1959_두개의숫자열 {
             else if(N == M) {
                 sum = 0;
                 for (int i = 0; i < N; i++) {
-                    opp(a[i], b[i]);
+                	sum += a[i]*b[i];
                 }
             }
             else {
                 for (int i = 0; i <= N-M; i++) {
                     sum = 0;
+                    int idx = i;
                     for (int j = 0; j < M; j++) {
-                        opp(a[j+i], b[j]);
+                    	sum += a[idx++]*b[j];
                     }
                     max = Math.max(max, sum);
                 }
@@ -61,26 +64,5 @@ public class Solution_1959_두개의숫자열 {
         }
         System.out.println(sb.toString());
  
-    }
-     
-    static void opp(String i, String j) {
-        if(i.charAt(0) == '-' && j.charAt(0) == '-') {
-            i = i.substring(1);
-            j = j.substring(1);
-            sum += Integer.parseInt(i)*Integer.parseInt(j);
-        }
-        else if(i.charAt(0) == '-') {
-            i = i.substring(1);
-            sum -= Integer.parseInt(i)*Integer.parseInt(j);
-        }
-        else if(j.charAt(0) == '-') {
-            j = j.substring(1);
-            sum -= Integer.parseInt(i)*Integer.parseInt(j);
-        }
-        else {
-            sum += Integer.parseInt(i)*Integer.parseInt(j);
-        }
-         
-    }
- 
+    } 
 }
