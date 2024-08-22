@@ -21,10 +21,12 @@ public class Solution_1984_중간평균값구하기 {
 			
 			Arrays.sort(arr);
 			int sum = 0;
+			//가장 큰 값과 가장 작은 값을 뺀 숫자들의 평균 구하기
 			for (int j = 1; j < 9; j++) {
 				sum += arr[j];
 			}
 			int avg = sum/8;
+			//반올림
 			if(sum%8 >= 4) avg++;
 			sb.append("#").append(i+1).append(" ").append(avg + "\n");
 		}
