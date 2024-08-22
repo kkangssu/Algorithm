@@ -7,7 +7,6 @@ public class Main_2805_나무자르기 {
 	static int N;
 	static int M;
 	static int[] tree;
-	static int H;
 	static int min;
 	static int max;
 
@@ -36,18 +35,18 @@ public class Main_2805_나무자르기 {
 	static void findH() {
 		while(min < max) {
 			long sum = 0L;
-			H = (max+min)/2;
+			int midH = (max+min)/2;
 			
 			for (int i = 0; i < N; i++) {
-				if(tree[i] > H) {
-					sum += tree[i]- H;
+				if(tree[i] > midH) {
+					sum += tree[i] - midH;
 				}
 			}
 			if(sum < M) {
-				max = H;
+				max = midH;
 			}
 			else {
-				min = H+1;
+				min = midH+1;
 			}
 		}
 	}
