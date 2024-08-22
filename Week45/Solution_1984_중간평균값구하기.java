@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_1984 {
+public class Solution_1984_중간평균값구하기 {
 
 	static int[] arr = new int[10];
 	
