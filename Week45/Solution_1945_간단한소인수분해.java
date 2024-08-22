@@ -1,9 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Solution_1945 {
-	
-	static int T;
+public class Solution_1945_간단한소인수분해 {
+    static int T;
     static int N;
     static int[] nums = {11, 7, 5, 3, 2};
     static int[] abcde;
