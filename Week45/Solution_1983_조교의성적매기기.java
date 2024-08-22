@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Solution_1983 {
+public class Solution_1983_조교의성적매기기 {
 	
 	static int T;
 	static int N;
