@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_1959 {
+public class Solution_1959_두개의숫자열 {
 	static int T;
     static int N;
     static int M;
