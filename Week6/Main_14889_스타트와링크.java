@@ -6,55 +6,57 @@ import java.util.StringTokenizer;
 
 public class Main_14889_스타트와링크 {
 	
-	public static int n;
+	public static int N;
 	public static int[][] ability;
-	public static int min_differ;
-	public static boolean[] pick;
+	public static int min;
+	public static boolean[] visited;
 
 	public static void main(String[] args) throws Exception {
-BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		n = Integer.parseInt(br.readLine());
-		ability = new int[n][n];
-		pick = new boolean[n];
-		min_differ = 1000;
+		N = Integer.parseInt(br.readLine());
+		ability = new int[N][N];
+		visited = new boolean[N];
+		min = 1000;		//1<=S<=100, 4<=N<=20
 		
-		for(int i = 0; i < n; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			for(int j = 0; j < n; j++) {
+		for(int i = 0; i < N; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			for(int j = 0; j < N; j++) {
 				ability[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 		
-		StartLink(0, -1);
+		teamStart(0, 0);
 
-		System.out.println(min_differ);
+		System.out.println(min);
 
 	}
 	
-	public static void StartLink(int member, int prev) {
-		if(member == n/2) {
-			min_differ = Math.min(min_differ, differ());
+	public static void teamStart(int member, int prev) {
+		if(member == N/2) {
+			//start팀인 사람은 visited = true, link팀인 사람은 visited = false
+			differ();
+			return;
 		}
 		
-		for(int i = prev+1; i < n; i++) {
-			if(!pick[i]) {
-				pick[i] = true;
-				StartLink(member+1, i);
-				pick[i] = false;
+		for(int i = prev; i < N; i++) {
+			if(!visited[i]) {
+				visited[i] = true;
+				teamStart(member+1, i+1);
+				visited[i] = false;
 			}
 		}
 	}
 	
-	public static int differ() {
-		int[] start = new int[n/2];
-		int[] link = new int[n/2];
+	public static void differ() {
+		int[] start = new int[N/2];
+		int[] link = new int[N/2];
 		
 		int dp1 = 0;
 		int dp2 = 0;
 		//pick[i]가 true면 start팀 멤버, false면 link팀 멤버
-		for(int i = 0; i < n; i++) {
-			if(pick[i]) {
+		for(int i = 0; i < N; i++) {
+			if(visited[i]) {
 				start[dp1++] = i;
 			}
 			else {
@@ -62,17 +64,16 @@ BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			}
 		}
 		
-		int sum_start = 0;
-		int sum_link = 0;
-		for(int i = 0; i < n/2; i++) {
-			for(int j = 0; j < n/2; j++) {
-				sum_start += ability[start[i]][start[j]];
-				sum_link += ability[link[i]][link[j]];
+		int sumStart = 0;
+		int sumLink = 0;
+		for(int i = 0; i < N/2; i++) {
+			for(int j = 0; j < N/2; j++) {
+				sumStart += ability[start[i]][start[j]];
+				sumLink += ability[link[i]][link[j]];
 			}
 		}
-		int diff = Math.max(sum_start - sum_link, sum_link - sum_start);
-		
-		return diff;
+		min = Math.min(min, Math.abs(sumStart-sumLink));
+		return;
 	}
 
 }
