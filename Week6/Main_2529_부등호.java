@@ -60,11 +60,7 @@ public class Main_2529_부등호 {
 					visited[j] = false;
 				}
 			}
-		}
-		
+		}	
 	}
-	
-
-
 }
 
