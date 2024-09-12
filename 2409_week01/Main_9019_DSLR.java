@@ -10,6 +10,7 @@ import java.util.StringTokenizer;
 * A를 가공한 수는 모두 10000 이하 -> visited[10000]
 * oper[num] -> oper[이전 num] + 이전 num에서 num을 만든 명령어
 * B에 도달했을 때 oper[B]는 B까지의 명령어들 문자열
+* 3816ms
 */
 
 public class Main_9019_DSLR {
