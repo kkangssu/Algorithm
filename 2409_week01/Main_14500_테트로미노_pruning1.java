@@ -5,6 +5,11 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //640ms
+/*
+* ㅏ인 경우
+*	idx = 4가 idx=3에 붙을 수도, idx=2에 붙을 수도 있음
+*	--> idx == 2인 경우 tetromino(idx+1, sum+map[nr][nc], r, c)로 다음 칸으로 넘어가지 않는 경우 생각
+*/
 
 public class Main_14500_테트로미노_pruning1 {
 	
