@@ -5,7 +5,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //640ms
-
+/*
+* 각 칸(i, j)에서 시작해서 델타 +  DFS로 4칸을 구하고 sum 비교
+*/
 public class Main_14500_테트로미노 {
 	
 	static int N, M;
@@ -55,8 +57,8 @@ public class Main_14500_테트로미노 {
 			if(check(nr, nc)) {
 				if(visited[nr][nc]) continue;
 				visited[nr][nc] = true;
-				tetromino(idx+1, sum+map[nr][nc], nr, nc);
-				tetromino(idx+1, sum+map[nr][nc], r, c);
+				tetromino(idx+1, sum+map[nr][nc], nr, nc);	//다음 칸을 nr, nc에 이어진 칸으로 찾는 경우
+				tetromino(idx+1, sum+map[nr][nc], r, c);	//다음 칸을 r, c에 이어진 칸으로 찾는 경우
 				visited[nr][nc] = false;
 			}
 		}
