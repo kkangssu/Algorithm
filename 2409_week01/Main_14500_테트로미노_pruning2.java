@@ -4,7 +4,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_14500_테트로미노_pruning2 {
+/*
+* 모든 칸 중 가장 큰 값인 maxNum을 구해둔 다음 각 DFS마다 (지금까지의 합 + maxNum*남은칸수)가 max보다 작은 경우 return
+* -> 292ms
+*/
+
+public class Main_14500_테트로미노_pruning {
 	
 	static int N, M;
 	static int[][] map;
@@ -13,8 +18,6 @@ public class Main_14500_테트로미노_pruning2 {
 	static int max;
 	static boolean[][] visited;
 	static int maxNum;
-	
-	//292ms
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
