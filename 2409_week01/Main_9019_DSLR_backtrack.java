@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
 * before[num]에 이전 num을 저장해 backtracking하는 방법
 * 방법1) backtracking하는 과정을 stack에 저장해 모두 저장 후 뒤에서부터 뽑아내기
 * 방법2) StringBuilder에 저장한 후 sb.reverse하기
-* -> StringBuilder가 메모리 덜 사용
+* -> 명령어 길이가 길어질 경우 StringBuilder가 메모리 덜 사용
 */
 
 public class Main_9019_DSLR_backtrack {
