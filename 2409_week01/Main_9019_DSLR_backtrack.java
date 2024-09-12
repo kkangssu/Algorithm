@@ -14,6 +14,8 @@ import java.util.StringTokenizer;
 * 방법1) backtracking하는 과정을 stack에 저장해 모두 저장 후 뒤에서부터 뽑아내기
 * 방법2) StringBuilder에 저장한 후 sb.reverse하기
 * -> 명령어 길이가 길어질 경우 StringBuilder가 메모리 덜 사용
+* 일반적으로 Queue<Integer> queue = new ArrayDeque<>()가 new LinkedList<>()보다 효율적
+* 2412ms - 2548ms 
 */
 
 public class Main_9019_DSLR_backtrack {
