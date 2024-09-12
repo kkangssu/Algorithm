@@ -7,6 +7,15 @@ import java.util.Arrays;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/*
+* 문자열 배열 + 문자열 연결은 시간, 메모리를 많이 사용하지 않을까?
+* 그래서 oper[num]에는 이전 num에서 num을 만든 명령어 char을 저장
+* before[num]에 이전 num을 저장해 backtracking하는 방법
+* 방법1) backtracking하는 과정을 stack에 저장해 모두 저장 후 뒤에서부터 뽑아내기
+* 방법2) StringBuilder에 저장한 후 sb.reverse하기
+* -> StringBuilder가 메모리 덜 사용
+*/
+
 public class Main_9019_DSLR_backtrack {
 	
 	static int[] before;
