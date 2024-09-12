@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
 *	--> idx = 2인 경우에만 경우의 수가 2개
 */
 
-public class Main_14500_테트로미노_pruning1 {
+public class Main_14500_테트로미노_2 {
 	
 	static int N, M;
 	static int[][] map;
