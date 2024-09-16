@@ -40,10 +40,10 @@ public class Main_11664_선분과점 {
 		double ABAB = dotProduct(AB, AB);
 		
 		double x = ABAC/ABAB;
-		if(x < 0) x = 0;				//A와 가장 가까운 경우
+		if(x < 0) x = 0;			//A와 가장 가까운 경우
 		else if(x > 1) x = 1;			//B와 가장 가까운 경우
 		
-		for (int i = 0; i < 3; i++) {	//선분 AB 위의 점 D와 가장 가까운 경우
+		for (int i = 0; i < 3; i++) {		//선분 AB 위의 점 D와 가장 가까운 경우
 			D[i] = A[i] + x*AB[i];		//0 < x < 1
 		}
 		
