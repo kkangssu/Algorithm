@@ -32,7 +32,7 @@ public class Main {
 	}
 
 	public static void LinkStart(int member, int prev) {
-		if(member >= 1) {
+		if(member >= 1) {		//각 팀의 인원이 정해지지 않음 -> 한명 이상이 된 경우부터 모두 비교해야함
 			min_differ = Math.min(min_differ, differ(member));
 		}
 		
@@ -51,7 +51,7 @@ public class Main {
 		
 		int dp1 = 0;
 		int dp2 = 0;
-		//pick[i]가 true면 start팀 멤버, false면 link팀 멤버
+		//pick[i]가 true면 start팀 멤버, false면 link팀 멤버 각 배열에 저장
 		for(int i = 0; i < n; i++) {
 			if(pick[i]) {
 				start[dp1++] = i;
