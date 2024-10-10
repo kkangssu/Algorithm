@@ -10,6 +10,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /*
+ * <다익스트라 기본 코드>
  *     static void dijkstra(int start) {
         //우선 순위 큐 사용, 가중치를 기준으로 오름차순한다.
         PriorityQueue<Node> q = new PriorityQueue<>((o1, o2) -> o1.cost - o2.cost);
@@ -41,15 +42,15 @@ public class Main_13308_주유소 {
 	static class Node implements Comparable<Node>{
 		int arrive;
 		int length;
-		int minPrice;
-		long total;
-		Node(int arrive, int minPrice, long total){
+		int minPrice;	//현재까지 최소 금액
+		long total;	//현재까지 주유값 합
+		Node(int arrive, int minPrice, long total){	//이건 최소 가격 비교하려고
 			this.arrive = arrive;
 			this.minPrice = minPrice;
 			this.total = total;
 		}
 		
-		Node(int arrive, int length){
+		Node(int arrive, int length){	//이건 그래프 노드 저장하려고
 			this.arrive = arrive;
 			this.length = length;
 		}
@@ -73,6 +74,16 @@ public class Main_13308_주유소 {
 		road = Integer.parseInt(st.nextToken());
 		oil = new int[city+1];
 		visited = new long[city+1][2500+1];
+		
+		//전에 visited 배열을 같은 위치여도 방문 방향에 따라 다르게 생각함 -> 같은 도시에 방문하더라도 최소 금액이 다른 경우 다른 visited로 봐야한다
+		//new long[city+1][N]으로 초기화하고 싶었는데 솔직히 2501은 낭비니까
+		//Map<Integer, Integer> match = new HashMap<>();
+		//for (int i = 0; i < city; i++) {
+		//	match.put(oil[i+1], i);
+		//}
+		//으로 비용 = key value = index로 저장해서
+		//visited[next.arrive][match.get(now.minPrice)] = tmp;로 매칭했는데 메모리, 시간이 더 걸림 그냥 쓰레기 배열을 만드는게 좋음
+		
 		for (int i = 0; i <= city; i++) {
 			Arrays.fill(visited[i], Long.MAX_VALUE);
 		}
