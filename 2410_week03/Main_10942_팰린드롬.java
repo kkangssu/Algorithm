@@ -23,7 +23,7 @@ public class Main_10942_팰린드롬 {
 		for (int i = 1; i <= N; i++) {
 			nums[i] = Integer.parseInt(st.nextToken());
 		}
-		dp();
+		palindrom();
 //		for (int i = 1; i <= N; i++) {
 //			System.out.println(Arrays.toString(palin[i]));
 //		}
@@ -38,7 +38,7 @@ public class Main_10942_팰린드롬 {
 		System.out.println(sb.toString());
 	}
 
-	static void dp() {
+	static void palindrom() {
 		palin[1][1] = palin[N][N] = true;
 		for (int i = 2; i < N; i++) {
 			palin[i][i] = true;
