@@ -40,6 +40,7 @@ public class Main_10942_팰린드롬 {
 
 	static void palindrom() {
 		palin[1][1] = palin[N][N] = true;
+		//길이가 홀수인 펠린드롬
 		for (int i = 2; i < N; i++) {
 			palin[i][i] = true;
 			int s = i;
@@ -62,6 +63,7 @@ public class Main_10942_팰린드롬 {
 				palin[s][e] = true;				
 			}
 		}
+		//길이가 짝수인 펠린드롬
 		for (int i = 2; i < N; i++) {
 			int s = i;
 			int e = i+1;
