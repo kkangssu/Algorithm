@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-public class Main_1941_소문난칠공주2 {
+public class Main_1941_소문난칠공주 {
 	
 	static class RC{
 		int r;
