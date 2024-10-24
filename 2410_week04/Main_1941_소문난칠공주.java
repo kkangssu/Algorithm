@@ -44,7 +44,7 @@ public class Main_1941_소문난칠공주 {
 		System.out.println(som);
 
 	}
-
+	//전체 칸에서 임의로 7칸 고르기 -> 7칸이 인접한지 확인: isAdjacent()
 	static void comb(int idx, int num, int numS) {
 		if(7 - num < 4 - numS) return;
 		
@@ -64,13 +64,11 @@ public class Main_1941_소문난칠공주 {
         }		
 	}
 
-
-
 	static boolean isAdjacent() {
 		boolean[][] visited = new boolean[5][5];
-        Queue<RC> que = new ArrayDeque<>();
-        
-        a: for (int i = 0; i < 5; i++) {
+        	Queue<RC> que = new ArrayDeque<>();
+        	//고른 7명만 boolean = true
+	        a: for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				if(pick7[i][j]) {
 					que.offer(new RC(i, j));
