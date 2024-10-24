@@ -7,9 +7,9 @@ import java.util.StringTokenizer;
 public class Main_2528_사다리 {
 	
 	static class Stick{
-		int s;
-		int e;
-		int d;
+		int s;	//시작점(왼쪽)
+		int e;	//끝점(오른쪽)
+		int d;	//방향
 		Stick(int s, int e, int d){
 			this.s = s;
 			this.e = e;
@@ -37,7 +37,7 @@ public class Main_2528_사다리 {
 				f[i] = new Stick(L-l, L, di);
 			}
 		}
-		f[N] = new Stick(1, L, 0);
+		f[N] = new Stick(1, L, 0);	//맨 윗 층 = 길이가 한 층 전체라 생각
 		
 		System.out.println(goup());
 
@@ -49,14 +49,15 @@ public class Main_2528_사다리 {
 		while(idx < N) {
 			int s = f[idx].s;
 			int e = f[idx].e;
+			//다음층 정보
 			int ns = f[idx+1].s;
 			int ne = f[idx+1].e;
-			
+			//지금 층과 다음 층에 겹치는 부분이 없는 경우 = 올라가지 못하는 경우 -> 막대 움직이기
 			if(ns > e || ne < s) {
 				time++;
 				move();
 			}
-			else {
+			else {	//올라가기
 				idx++;
 			}
 		}
