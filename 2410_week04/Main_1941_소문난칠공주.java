@@ -67,7 +67,7 @@ public class Main_1941_소문난칠공주 {
 	static boolean isAdjacent() {
 		boolean[][] visited = new boolean[5][5];
         	Queue<RC> que = new ArrayDeque<>();
-        	//고른 7명만 boolean = true
+        	//고른 7명 중 시작점 찾기 -> que에 저장
 	        a: for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
 				if(pick7[i][j]) {
@@ -77,11 +77,11 @@ public class Main_1941_소문난칠공주 {
 				}
 			}
 		}
-        
-        int cnt = 1;
-        while(!que.isEmpty()) {
-        	RC now = que.poll();
-        	for (int i = 0; i < 4; i++) {
+        	//시작점부터 인접 bfs -> 모두 인접하면 cnt == 7
+        	int cnt = 1;
+        	while(!que.isEmpty()) {
+        		RC now = que.poll();
+        		for (int i = 0; i < 4; i++) {
 				int nr = now.r + dr[i];
 				int nc = now.c + dc[i];
 				
@@ -93,10 +93,8 @@ public class Main_1941_소문난칠공주 {
 				cnt++;
 				que.offer(new RC(nr, nc));
 			}
-        }
-        
-        return cnt == 7;
-		
+		}
+	        return cnt == 7;
 	}
 
 	static boolean check(int r, int c) {
