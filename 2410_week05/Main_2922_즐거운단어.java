@@ -26,23 +26,23 @@ public class Main_2922_즐거운단어 {
 		if(idx == str.length()) {
 			if(!flag) return;	//L이 들어가지 않은 경우
 			num += n;
-			System.out.println("num: " + num);
-			System.out.println();
+			//System.out.println("num: " + num);
+			//System.out.println();
 			return;
 		}
 		
-		System.out.println(str.charAt(idx) + " " + n);
+		//System.out.println(str.charAt(idx) + " " + n);
 		if(str.charAt(idx) == '_') {
 			if(ja < 2) {
-				System.out.println("put L");
+				//System.out.println("put L");
 				make(idx+1, n, ja+1, 0, true);
-				System.out.println("put ja");
+				/System.out.println("put ja");
 				make(idx+1, n*20, ja+1, 0, flag);
 				//flag = true면 이미 있어서 넣지 않은 경우
 				//flag = false면 다음 _에서 넣어줄꺼야
 			}
 			if(mo < 2) {
-				System.out.println("put mo");
+				//System.out.println("put mo");
 				make(idx+1, n*5, 0, mo+1, flag);
 			}
 			return;
