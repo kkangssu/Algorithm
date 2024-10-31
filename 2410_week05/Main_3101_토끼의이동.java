@@ -23,12 +23,12 @@ public class Main_3101_토끼의이동 {
 		start = new long[2*N-1];
 		start[0] = 1;
 		for (int i = 1; i < N; i++) {
-	        start[i] = start[i-1] + i;
-	    }
-	    start[2*N-2] = 1l*N*N;
-	    for (int i = 2; i < N; i++) {
-	        start[2*N-1-i] = start[2*N-i] - i;
-	    }
+	        	start[i] = start[i-1] + i;
+	    	}
+	   	start[2*N-2] = 1l*N*N;
+	    	for (int i = 2; i < N; i++) {
+	        	start[2*N-1-i] = start[2*N-i] - i;
+	    	}
 		move();
 		System.out.println(sum);
 	}
