@@ -59,16 +59,12 @@ public class Main_10711_모래성 {
 					int nr = z.r + dr[i];
 					int nc = z.c + dc[i];
 					if(!check(nr, nc)) continue;
-					if(map[nr][nc] == 0) continue;
+					if(map[nr][nc] == 0) continue;	//이미 무너진 칸은 넘김
 					if(map[nr][nc] != 0) map[nr][nc]--;
-					if(map[nr][nc] == 0) que.offer(new RC(nr, nc));
+					if(map[nr][nc] == 0) que.offer(new RC(nr, nc));	//새로 무너진 칸만 que에 저장 
 				}
 			}
 			t++;
-			for (int i = 0; i < H; i++) {
-				System.out.println(Arrays.toString(map[i]));
-			}
-			System.out.println(t);
 		}
 	}
 	
