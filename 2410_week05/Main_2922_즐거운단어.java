@@ -14,7 +14,7 @@ public class Main_2922_즐거운단어 {
 		boolean flag = false;
 		for (int i = 0; i < str.length(); i++) {
 			if(str.charAt(i) == 'L') {
-				flag = true;
+				flag = true;	//flag는 L이 포함되면 true
 				break;
 			}
 		}
