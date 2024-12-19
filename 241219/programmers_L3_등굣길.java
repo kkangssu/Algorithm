@@ -17,8 +17,8 @@ class Solution {
 		for (int r = 0; r < n; r++) {
 			for (int c = 0; c < m; c++) {
 				if(dp[r][c] < 0) continue;
-				if(r >= 1 && dp[r-1][c] >= 0) dp[r][c] = (dp[r][c] + dp[r-1][c]);
-				if(c >= 1 && dp[r][c-1] >= 0) dp[r][c] = (dp[r][c] + dp[r][c-1]);
+				if(r >= 1 && dp[r-1][c] >= 0) dp[r][c] += dp[r-1][c];
+				if(c >= 1 && dp[r][c-1] >= 0) dp[r][c] += dp[r][c-1];
 				dp[r][c] %= 1000000007;
 			}
 		}
