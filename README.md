@@ -114,6 +114,10 @@ PR 마감 : 스터디 시작 전 <br>
 | 19 |  [파괴되지 않은 건물][95]  |  [게임 개발][96]:ballot_box_with_check:  |  [돌 그룹][97]:ballot_box_with_check:  |
 | 20 |  [문자열 폭발][98]  |  [벽 부수고 이동하기 2][99]  |  [동전 1][100]  | [가장 긴 팰린드롬][101]  |
 
+:ballot_box_with_check:: 복습 문제
+:white_check_mark:: 복습한 문제
+
+
 [1]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LrsUaDxcDFAXc&
 [2]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh
 [3]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PobmqAPoDFAUq
