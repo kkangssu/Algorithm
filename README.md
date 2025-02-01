@@ -110,9 +110,9 @@ PR 마감 : 스터디 시작 전 <br>
 | 16 |  [소수의 연속합][82]  |  [문제집][83]  |  [가스관][84]  |  [상어 중학교][85]  |
 |        |  [특정한 최단 경로][86]  |  [2048 (Easy)][87]  |
 | 17 |  [석유시추][88]  |  [등굣길][89]  |  [미로 탈출 명령어][90]  |
-| 18 |  [길 찾기 게임][91]  |  [단속카메라][92]  |  [줄 세우기][93]  |  [전깃줄][94]  |
-| 19 |  [파괴되지 않은 건물][95]  |  [게임 개발][96]  |  [돌 그룹][97]  |
-| 20 |  [문자열 폭발][98]  |  [벽 부수고 이동하기 2][99]  |  [동전 1][100]  |
+| 18 |  [길 찾기 게임][91]  |  [단속카메라][92]  |  [줄 세우기][93]:ballot_box_with_check:  |  [전깃줄][94]:ballot_box_with_check:  |
+| 19 |  [파괴되지 않은 건물][95]  |  [게임 개발][96]:ballot_box_with_check:  |  [돌 그룹][97]:ballot_box_with_check:  |
+| 20 |  [문자열 폭발][98]  |  [벽 부수고 이동하기 2][99]  |  [동전 1][100]  | [가장 긴 팰린드롬][101]  |
 
 [1]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LrsUaDxcDFAXc&
 [2]: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV13zo1KAAACFAYh
@@ -214,6 +214,7 @@ PR 마감 : 스터디 시작 전 <br>
 [98]: https://www.acmicpc.net/problem/9935
 [99]: https://www.acmicpc.net/problem/14442
 [100]: https://www.acmicpc.net/problem/2293
+[101]: https://school.programmers.co.kr/learn/courses/30/lessons/12904
 
 ### 🔍 참고 사이트
 
