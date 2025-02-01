@@ -82,11 +82,24 @@ PR 마감 : 스터디 시작 전 <br>
 
 | 주차  |                                        문제 1                                         |                                    문제 2                                     |                      문제 3                       |                     문제4                      |
 | :---: | :-----------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :-----------------------------------------------: | :--------------------------------------------: |
-| 1주차 | [파괴되지 않은 건물](https://school.programmers.co.kr/learn/courses/30/lessons/92344) |               [게임 개발][1]               | [돌 그룹](https://www.acmicpc.net/problem/12886)  |
-| 2주차 |                  [문자열 폭발](https://www.acmicpc.net/problem/9935)                  |         [벽 부수고 이동하기 2](https://www.acmicpc.net/problem/14442)         |  [동전 1](https://www.acmicpc.net/problem/2293)   |
-| 3주차 |    [길 찾기 게임](https://school.programmers.co.kr/learn/courses/30/lessons/42892)    | [단속카메라](https://school.programmers.co.kr/learn/courses/30/lessons/42884) | [줄 세우기](https://www.acmicpc.net/problem/2252) | [전깃줄](https://www.acmicpc.net/problem/2565) |
+| 1주차 |  [파괴되지 않은 건물][100]  |  [게임 개발][101]  |  [돌 그룹][102]  |
+| 2주차 |  [길 찾기 게임][103]  |  [단속카메라][104]  |  [줄 세우기][105]  |  [전깃줄][106]  |
+| 3주차 |  [문자열 폭발][107]  |  [벽 부수고 이동하기 2][108]  |  [동전 1][109]  |
 
-[1]: https://www.acmicpc.net/problem/1516
+
+
+
+[100]: https://school.programmers.co.kr/learn/courses/30/lessons/92344
+[101]: https://www.acmicpc.net/problem/1516
+[102]: https://www.acmicpc.net/problem/12886
+[103]: https://school.programmers.co.kr/learn/courses/30/lessons/42892
+[104]: https://school.programmers.co.kr/learn/courses/30/lessons/42884
+[105]: https://www.acmicpc.net/problem/2252
+[106]: https://www.acmicpc.net/problem/2565
+[107]: https://www.acmicpc.net/problem/9935
+[108]: https://www.acmicpc.net/problem/14442
+[109]: https://www.acmicpc.net/problem/2293
+[110]: 
 ### 🔍 참고 사이트
 
 - 백준 온라인 저지
