@@ -90,7 +90,6 @@ PR 마감 : 스터디 시작 전 <br>
 
 
 [100]: https://school.programmers.co.kr/learn/courses/30/lessons/92344
-[101]: 
 [102]: https://www.acmicpc.net/problem/12886
 [103]: https://school.programmers.co.kr/learn/courses/30/lessons/42892
 [104]: https://school.programmers.co.kr/learn/courses/30/lessons/42884
