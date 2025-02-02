@@ -1,4 +1,4 @@
-package Algo2502;
+package Algo2409;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
